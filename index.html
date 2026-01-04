@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Play Connections - A fun word puzzle game where you find groups of four items that share something in common.">
+    <title>Connections - Word Puzzle Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Connections</h1>
+            <p class="subtitle">Create four groups of four!</p>
+        </header>
+
+        <main>
+            <!-- Results Area - Shows found categories -->
+            <div id="results" class="results"></div>
+
+            <!-- Game Info -->
+            <div class="game-info">
+                <div class="mistakes">
+                    <span>Mistakes remaining:</span>
+                    <div class="mistake-dots">
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                        <span class="dot filled"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Word Grid -->
+            <div id="word-grid" class="word-grid"></div>
+
+            <!-- Game Controls -->
+            <div class="controls">
+                <button id="shuffle-btn" class="btn btn-secondary">
+                    <span>🔀</span> Shuffle
+                </button>
+                <button id="deselect-btn" class="btn btn-secondary">
+                    Deselect All
+                </button>
+                <button id="submit-btn" class="btn btn-primary">
+                    Submit
+                </button>
+            </div>
+
+            <!-- Game Over Modal -->
+            <div id="game-over-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-message"></p>
+                    <button id="play-again-btn" class="btn btn-primary">Play Again</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Heyyyy Liv connections birthday style!! Let's gooooooo</p>
+        </footer>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
